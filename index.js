@@ -7,7 +7,7 @@ const questions = [
     "What is the title of your project?",                                //0
     "Please provide a short description of your project:",               //1
     "Which license is this project covered under?",                      //2
-    "Would you like to provide installation instructions? [Y/N]",        //3
+    "Would you like to provide installation instructions?",        //3
     "Please provide installation instructions:",                         //4
     "Would you like to provide usage information? [Y/N]",                //5
     "Please provide usage information:",                                 //6
@@ -41,23 +41,116 @@ function ask() {
         .prompt([
             //Project Name
             {
+                type: 'input',
+                name: 'name',
+                message: questions[0]
+            },
+            //Project description
+            {
+                type: 'input',
+                name: 'desc',
+                message: questions[1]
+            },
+            //Project license
+            {
+                type: 'checkbox',
+                name: 'desc',
+                message: questions[2],
+                choices: ["op1", "op2", "op3", "op4"]
+            },
+            //install instructions
+            {
                 type: 'confirm',
-                name: 'install',
+                name: 'wInstall',
                 message: questions[3]
             },
             {
                 when: function (response) {
-                  console.log(response.install)
-                    return response.install;
+                    return response.wInstall;
                 },
-                name: 'want_install',
+                type: 'confirm',
+                name: 'install',
                 message: questions[4]
             }, 
+            //usage instructions
             {
                 type: 'confirm',
-                name: 'test',
+                name: 'wUsage',
                 message: questions[5]
             },
+            {
+                when: function (response) {
+                    return response.wUsage;
+                },
+                name: 'usage',
+                message: questions[6]
+            }, 
+            //contribution instructions
+            {
+                type: 'confirm',
+                name: 'wCont',
+                message: questions[7]
+            },
+            {
+                when: function (response) {
+                    return response.wCont;
+                },
+                name: 'cont',
+                message: questions[8]
+            }, 
+            //test instructions
+            {
+                type: 'confirm',
+                name: 'wTest',
+                message: questions[9]
+            },
+            {
+                when: function (response) {
+                    return response.wTest;
+                },
+                name: 'test',
+                message: questions[10]
+            }, 
+            //github info
+            {
+                type: 'confirm',
+                name: 'wGit',
+                message: questions[11]
+            },
+            {
+                when: function (response) {
+                    return response.wGit;
+                },
+                name: 'git',
+                message: questions[12]
+            }, 
+            //email
+            {
+                type: 'confirm',
+                name: 'wEmail',
+                message: questions[13]
+            },
+            {
+                when: function (response) {
+                    return response.wEmail;
+                },
+                type: 'input',
+                name: 'email',
+                message: questions[14]
+            }, 
+            //call me, beep me, if you wanna reach me
+            {
+                type: 'confirm',
+                name: 'wReach',
+                message: questions[15]
+            },
+            {
+                when: function (response) {
+                    return response.wReach;
+                },
+                name: 'reach',
+                message: questions[16]
+            }, 
         ])
     .then((data) => {
         console.log(data)
