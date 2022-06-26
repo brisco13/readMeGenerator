@@ -49,6 +49,8 @@ This project is licensed under the MIT License,Berkeley Software Distribution Li
 - Creates a completely formatted readme.md file with prompts to improve
 - Multiple license badges may be included and added to the top of your project
 - Watch the video below for a walkthrough of how to use this tool!
+https://user-images.githubusercontent.com/103338620/175801915-e152eb70-5f27-4325-aeb3-fc82312c9e01.mp4
+
 
 
 ## Credits: 
