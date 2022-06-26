@@ -37,7 +37,7 @@ This project will not be accepting contributions, but thank you for your interes
 
 ## License: 
 
-This project is licensed under the MIT License,Berkeley Software Distribution License,Internet Systems Consortium License
+N/A
 
 ---
 
