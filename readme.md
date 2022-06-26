@@ -25,6 +25,7 @@ This app allows you to input answers to prompts in the command line via node.js 
 ## Installation
 
  Prior to use, please run a "npm install" to ensure the latest versions of node.js are fetched.
+ The program is launched by entering "node index.js" in the root folder after clone.
 
 ## Usage
 
